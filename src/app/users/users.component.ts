@@ -12,8 +12,9 @@ export class UsersComponent {
 constructor(){
 
 }
-  onuserAdded(){
-    this.userList.push(this.userName);
+  onuserAdded(event : string){
+    this.userList.push(event);
+    //this.userList.push(this.userName);
  
   }
 
