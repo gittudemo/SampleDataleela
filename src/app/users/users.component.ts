@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
 })
 export class UsersComponent {
   userName : string = '';
+  userList :string[] = [];
+
+constructor(){
+
+}
+  onuserAdded(){
+    this.userList.push(this.userName);
+ 
+  }
 
 }
