@@ -1,0 +1,5 @@
+/* Angular Applies this red color only to the add-user-child componets since the view encapsulation is emulated and gives a unique identifier to all the h3 elemets */
+
+h3 {
+  color:red;  
+}
