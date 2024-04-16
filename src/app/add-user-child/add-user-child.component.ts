@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-add-user-child',
@@ -11,13 +11,16 @@ export class AddUserChildComponent {
   // userName : string = '';
 
   @Output() userAdded  = new EventEmitter<string>();
+  @ViewChild('inputElement') inputElement : ElementRef | undefined;
 
 
 
-  onuserAdded(input : HTMLInputElement) {
+  onuserAdded() {
     // this.userAdded.emit(this.userName);
     // console.log('Template input',input.value);
-     this.userAdded.emit(input.value);
+     //this.userAdded.emit(input.value);
+     //console.log(this.inputElement?.nativeElement.value);
+     this.userAdded.emit(this.inputElement?.nativeElement.value);
 
   }
 
