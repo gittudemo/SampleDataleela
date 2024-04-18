@@ -4,5 +4,8 @@
 <div class="mt-3">
   <h3>users List</h3>
 <!-- sending user Data as userName  -->
-  <app-user *ngFor="let user of userList" [userName] = user></app-user>
+  <app-user *ngFor="let user of userList" [userName] = user>
+    <!-- <div>Inserting dynamic contect in the uers componet</div> -->
+    <div>user Added: {{user}}</div>
+  </app-user>
 </div>
