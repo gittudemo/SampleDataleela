@@ -10,4 +10,13 @@ export class UserComponent {
 
   @Input() userName: string | undefined; 
 
+  constructor() {
+    console.log('constructor called');
+  }
+
+  ngOnInit() {
+    console.log('ngOnInit() called');
+
+  }
+
 }
