@@ -1,11 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, DoCheck, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
-export class UserComponent {
+export class UserComponent implements OnInit, DoCheck{
 
 
   @Input() userName: string | undefined; 
@@ -14,9 +14,17 @@ export class UserComponent {
     console.log('constructor called');
   }
 
+
   ngOnInit() {
     console.log('ngOnInit() called');
 
   }
+
+
+  ngDoCheck() {
+    console.log('Do check called');
+
+  }
+
 
 }
